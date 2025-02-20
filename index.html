@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD System</title>
+    <link rel="stylesheet" href="./styles/intex.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">L o g o</div>
+        <div class="sections hidden">
+          <ul class="ulsection">
+            <li id="employees">Employees</li>
+            <li id="profile">Profile</li>
+            <li id="about">About the Project</li>
+            <li id="logout">Log out</li>
+          </ul>
+        </div>
+        <form class="login active">
+          <input
+            type="text"
+            placeholder="User ID"
+            id="iduser"
+            class="login__input login__input--user"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="passuser"
+            class="login__input login__input--pass"
+          />
+          <button class="" id="login">Login</button>
+        </form>
+      </div>
+      <div class="menu hidden">
+        <div class="intro hidden">
+          <div class="leftwelcom">
+            <h3 class="welc"></h3>
+            <h2 id="clock" class="clock"></h2>
+          </div>
+        </div>
+        <div class="employees hidden">
+           <div class="heademploy"> <h3> Employees </h3> <h3 class="newemployeebtn show-modal"> New </h3></div>
+           <div class="bodytable">
+            <table>
+              <thead>
+                <tr>
+                  <th class="employeesectt epmlheader bordertableleft">ID</th>
+                  <th class="employeesectt epmlheader">First Name</th>
+                  <th class="employeesectt epmlheader">Last Name</th>
+                  <th class="employeesectt epmlheader">PayRate</th>
+                  <th class="employeesectt epmlheader">Role</th>
+                  <th class="employeesectt epmlheader bordertableright">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tableemployees">
+              </tbody>
+            </table>
+           </div>
+           <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h3 class="welc editempltitle">Add new Employee</h3>
+           <form action="">
+            <label for="firstname">First Name:</label> <input type="text" name="firstname" id="firstname" placeholder="Enter first name" required>
+            <label for="lastname">Last Name:</label> <input type="text" name="lastname" id="lastname" placeholder="Enter last name" required>
+            <label for="payrate">PayRate:</label> <input type="number" name="payrate" id="payrate" placeholder="$ per hour" required>
+            <label for="role">Role:</label>
+            <select name="role" id="role" required>
+              <option value="">--Please choose an option--</option>
+              <option value="General Manager">General Manager</option>
+              <option value="Shift Manager">Shift Manager</option>
+              <option value="Host">Host</option>
+              <option value="Developer">Developer</option>
+              <option value="HR">HR</option>
+              <option value="Production">Production</option>
+            </select>
+            <button id="addemployeebtn" value='0'>Add New Employee</button>
+           </form>
+          </div>
+          <div class="overlay hidden"></div>
+        </div>
+        <div class="profile hidden">
+          <div class="mainprofile">
+            <h3> Profile</h3>
+            <form action="">
+              <label for="userprofile">User:</label><input type="text" name="lastname" id="userprofile" placeholder="Enter last name" disabled>
+              <label for="firstnameprofile">First Name:</label> <input type="text" name="firstname" id="firstnameprofile" placeholder="Enter first name" disabled>
+              <label for="lastnameprofile">Last Name:</label> <input type="text" name="lastname" id="lastnameprofile" placeholder="Enter last name" disabled>
+              <label for="roleprofile">Role:</label><input type="text" name="lastname" id="roleprofile" placeholder="Enter last name" disabled>
+              
+              <!-- <button id="addemployeebtn" value='0'>Add New Employee</button> -->
+             </form>
+          </div>
+        </div>
+        <div class="about hidden">
+            <div class="aboutmain">
+              <div class="leftabout">
+                <h3>Why i made this project?:</h3>
+                  <p>I decided to create this because i think a CRUD system is a way to show 
+                    some part of the JS code that i learn with the school and courses that i'm having 
+                    now, i'm aware a lost a lot of practice because i was focus learning how to be a 
+                    General Manager and how to lead a team, but i'm trying to resume this again. </p> 
+                    <br>
+                    <h3>Comments about the projects:</h3>
+                    <p>I decided to not use a framework like react js, because i take this like a practice and a challenge in how
+                      use the vanilla js for add and remove class and how use objects and arrays and how to edit it. At the same
+                      time i'm not using a database for the same reason, but i have another future project with the database included.
+                      Same with the React js projects and maybe some C++.
+                    </p>
+              </div>
+              <div class="rightabout">
+                <h3>Used languages:</h3>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
